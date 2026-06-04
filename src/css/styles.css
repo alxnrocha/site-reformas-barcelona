@@ -134,7 +134,16 @@ section > * {
     margin-left: auto;
 }
 
-nav {
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 0.0625rem solid rgba(223, 213, 200, 0.85);
+    background: rgba(251, 247, 241, 0.92);
+    backdrop-filter: blur(1rem);
+}
+
+.site-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -144,12 +153,13 @@ nav {
     padding: 1.25rem 1.5rem;
 }
 
-nav > a {
+.site-logo {
     color: var(--color-primary-dark);
+    font-size: 1.05rem;
     font-weight: 700;
 }
 
-nav ul {
+.nav-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -157,8 +167,28 @@ nav ul {
     gap: 1.25rem;
 }
 
-nav a {
+.nav-list a {
+    color: var(--color-text);
+    font-size: 0.95rem;
     font-weight: 600;
+}
+
+.header-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999rem;
+    background: var(--color-primary);
+    color: var(--color-surface);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.header-cta:hover {
+    background: var(--color-primary-dark);
+    color: var(--color-surface);
 }
 
 footer {
@@ -204,14 +234,19 @@ main a[href^="#servicios"] {
         --section-spacing: 4rem;
     }
 
-    nav {
+    .site-nav {
         flex-direction: column;
         align-items: flex-start;
+        gap: 1rem;
     }
 
-    nav ul {
+    .nav-list {
         justify-content: flex-start;
         gap: 0.75rem 1rem;
+    }
+
+    .header-cta {
+        width: 100%;
     }
 
     section {
