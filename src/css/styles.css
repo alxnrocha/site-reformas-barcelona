@@ -3,24 +3,24 @@
    ========================================================================== */
 
 :root {
-    --color-background: #fbf7f1;
+    --color-background: #f4efe7;
     --color-surface: #ffffff;
-    --color-surface-soft: #f3ece2;
-    --color-primary: #255e63;
-    --color-primary-dark: #164548;
-    --color-accent: #c7824f;
-    --color-text: #18232f;
-    --color-muted: #5f6f7f;
-    --color-border: #dfd5c8;
+    --color-surface-soft: #e9dfd1;
+    --color-primary: #8a4f2f;
+    --color-primary-dark: #3f342d;
+    --color-accent: #b87345;
+    --color-text: #252525;
+    --color-muted: #675f58;
+    --color-border: #d3c3b1;
 
     --font-base: Arial, Helvetica, sans-serif;
     --font-display: Georgia, "Times New Roman", serif;
 
-    --container-width: 72rem;
+    --container-width: 76rem;
     --section-spacing: 5rem;
     --radius-small: 0.5rem;
     --radius-medium: 1rem;
-    --shadow-soft: 0 1.25rem 3rem rgba(24, 35, 47, 0.08);
+    --shadow-soft: 0 1.25rem 3rem rgba(63, 52, 45, 0.1);
 }
 
 /* ==========================================================================
@@ -91,7 +91,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-    outline: 0.1875rem solid rgba(199, 130, 79, 0.55);
+    outline: 0.1875rem solid rgba(184, 115, 69, 0.55);
     outline-offset: 0.25rem;
 }
 
@@ -138,8 +138,8 @@ section > * {
     position: sticky;
     top: 0;
     z-index: 10;
-    border-bottom: 0.0625rem solid rgba(223, 213, 200, 0.85);
-    background: rgba(251, 247, 241, 0.92);
+    border-bottom: 0.0625rem solid rgba(211, 195, 177, 0.85);
+    background: rgba(244, 239, 231, 0.92);
     backdrop-filter: blur(1rem);
 }
 
@@ -179,16 +179,19 @@ section > * {
     justify-content: center;
     min-height: 2.75rem;
     padding: 0.75rem 1.25rem;
-    border-radius: 999rem;
+    border-radius: 0.85rem;
     background: var(--color-primary);
     color: var(--color-surface);
     font-weight: 700;
     white-space: nowrap;
+    transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .header-cta:hover {
     background: var(--color-primary-dark);
     color: var(--color-surface);
+    box-shadow: 0 0.75rem 1.5rem rgba(63, 52, 45, 0.18);
+    transform: translateY(-0.125rem);
 }
 
 footer {
@@ -211,8 +214,9 @@ main a[href^="#servicios"] {
     margin-right: 0.75rem;
     padding: 0.75rem 1.25rem;
     border: 0.0625rem solid var(--color-primary);
-    border-radius: 999rem;
+    border-radius: 0.85rem;
     font-weight: 700;
+    transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 main a[href^="#contacto"] {
@@ -221,8 +225,24 @@ main a[href^="#contacto"] {
 }
 
 main a[href^="#servicios"] {
-    background: var(--color-surface);
+    background: rgba(255, 255, 255, 0.72);
     color: var(--color-primary-dark);
+}
+
+main a[href^="#contacto"]:hover {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-surface);
+    box-shadow: 0 0.75rem 1.5rem rgba(63, 52, 45, 0.18);
+    transform: translateY(-0.125rem);
+}
+
+main a[href^="#servicios"]:hover {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-surface);
+    box-shadow: 0 0.75rem 1.5rem rgba(63, 52, 45, 0.14);
+    transform: translateY(-0.125rem);
 }
 
 /* ==========================================================================
@@ -230,23 +250,67 @@ main a[href^="#servicios"] {
    ========================================================================== */
 
 .hero {
-    min-height: 42rem;
-    display: grid;
-    align-content: center;
+    position: relative;
+    min-height: 29rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--color-background);
+}
+
+.hero.hero {
+    padding: 0;
+}
+
+.hero::before {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, var(--color-background) 0%, rgba(244, 239, 231, 0.9) 34%, rgba(244, 239, 231, 0) 58%);
+    content: "";
+    pointer-events: none;
+}
+
+.hero-media {
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 63%;
+}
+
+.hero-media::before {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
     background:
-        radial-gradient(circle at 84% 24%, rgba(199, 130, 79, 0.18), transparent 30%),
-        linear-gradient(135deg, var(--color-background) 0%, #fffdf9 58%, var(--color-surface-soft) 100%);
+        linear-gradient(90deg, var(--color-background) 0%, rgba(244, 239, 231, 0.94) 16%, rgba(244, 239, 231, 0.62) 30%, rgba(244, 239, 231, 0.16) 45%, rgba(244, 239, 231, 0) 60%),
+        radial-gradient(circle at 18% 50%, rgba(244, 239, 231, 0.88), rgba(244, 239, 231, 0) 38%);
+    content: "";
+    pointer-events: none;
+}
+
+.hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.8fr);
-    align-items: center;
-    gap: 4rem;
+    position: relative;
+    z-index: 2;
+    width: min(100%, 92rem);
+    max-width: none;
+    margin: 0 auto;
+    padding: 4.25rem 2rem;
 }
 
 .hero-copy {
-    max-width: 43rem;
+    max-width: 48rem;
+}
+
+.hero h1 {
+    max-width: 47rem;
+    font-size: clamp(2.65rem, 4vw, 4rem);
 }
 
 .section-label {
@@ -259,80 +323,13 @@ main a[href^="#servicios"] {
 }
 
 .hero-description {
-    max-width: 38rem;
-    margin-top: 1.5rem;
-    font-size: 1.1rem;
+    max-width: 35rem;
+    margin-top: 1.15rem;
+    font-size: 1rem;
 }
 
 .hero-actions {
-    margin-top: 0.5rem;
-}
-
-.hero-card {
-    padding: 2rem;
-    border: 0.0625rem solid var(--color-border);
-    border-radius: var(--radius-medium);
-    background: rgba(255, 255, 255, 0.86);
-    box-shadow: var(--shadow-soft);
-}
-
-.hero-card p {
-    color: var(--color-accent);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.12rem;
-    text-transform: uppercase;
-}
-
-.hero-card h2 {
-    margin-top: 0.75rem;
-    font-family: var(--font-base);
-    font-size: 1.65rem;
-    line-height: 1.2;
-}
-
-.hero-card ul {
-    display: grid;
-    gap: 0.9rem;
-    margin-top: 1.5rem;
-}
-
-.hero-card li {
-    position: relative;
-    padding-left: 1.75rem;
-    color: var(--color-muted);
-}
-
-.hero-card li::before {
-    position: absolute;
-    left: 0;
-    color: var(--color-primary);
-    content: "✓";
-    font-weight: 800;
-}
-
-.hero-highlights {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
-    margin-top: 3.5rem;
-}
-
-.hero-highlights li {
-    padding-top: 1rem;
-    border-top: 0.0625rem solid rgba(37, 94, 99, 0.22);
-}
-
-.hero-highlights strong {
-    display: block;
-    color: var(--color-primary);
-    font-size: 0.9rem;
-}
-
-.hero-highlights span {
-    display: block;
-    margin-top: 0.35rem;
-    color: var(--color-muted);
+    margin-top: 1.45rem;
 }
 
 /* ==========================================================================
@@ -360,26 +357,33 @@ main a[href^="#servicios"] {
     }
 
     .hero {
-        min-height: auto;
+        min-height: 37rem;
+        align-items: flex-end;
+    }
+
+    .hero::before {
+        background:
+            linear-gradient(180deg, rgba(244, 239, 231, 0.96) 0%, rgba(244, 239, 231, 0.9) 52%, rgba(244, 239, 231, 0.74) 100%),
+            linear-gradient(90deg, var(--color-background) 0%, rgba(244, 239, 231, 0.68) 100%);
+    }
+
+    .hero-media {
+        width: 100%;
+        opacity: 0.36;
+    }
+
+    .hero-media::before {
+        background: linear-gradient(180deg, var(--color-background) 0%, rgba(244, 239, 231, 0.78) 55%, rgba(244, 239, 231, 0.42) 100%);
     }
 
     .hero-content {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+        padding-top: 7rem;
+        padding-bottom: 4rem;
     }
 
     .hero-copy,
     .hero-description {
         max-width: none;
-    }
-
-    .hero-card {
-        padding: 1.5rem;
-    }
-
-    .hero-highlights {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        margin-top: 2.5rem;
     }
 
     section {
@@ -397,9 +401,5 @@ main a[href^="#servicios"] {
     main a[href^="#servicios"] {
         width: 100%;
         margin-right: 0;
-    }
-
-    .hero-highlights {
-        grid-template-columns: 1fr;
     }
 }
