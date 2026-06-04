@@ -1,1 +1,221 @@
-/* Initial stylesheet. Global styles will be added in the CSS foundation issue. */
+/* ==========================================================================
+   Design tokens
+   ========================================================================== */
+
+:root {
+    --color-background: #fbf7f1;
+    --color-surface: #ffffff;
+    --color-surface-soft: #f3ece2;
+    --color-primary: #255e63;
+    --color-primary-dark: #164548;
+    --color-accent: #c7824f;
+    --color-text: #18232f;
+    --color-muted: #5f6f7f;
+    --color-border: #dfd5c8;
+
+    --font-base: Arial, Helvetica, sans-serif;
+    --font-display: Georgia, "Times New Roman", serif;
+
+    --container-width: 72rem;
+    --section-spacing: 5rem;
+    --radius-small: 0.5rem;
+    --radius-medium: 1rem;
+    --shadow-soft: 0 1.25rem 3rem rgba(24, 35, 47, 0.08);
+}
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-base);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* ==========================================================================
+   Base elements
+   ========================================================================== */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 0.1875rem solid rgba(199, 130, 79, 0.55);
+    outline-offset: 0.25rem;
+}
+
+h1,
+h2 {
+    color: var(--color-text);
+    font-family: var(--font-display);
+    line-height: 1.05;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+p {
+    color: var(--color-muted);
+}
+
+/* ==========================================================================
+   Layout foundation
+   ========================================================================== */
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+section {
+    padding: var(--section-spacing) 1.5rem;
+}
+
+section > * {
+    max-width: var(--container-width);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem;
+}
+
+nav > a {
+    color: var(--color-primary-dark);
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.25rem;
+}
+
+nav a {
+    font-weight: 600;
+}
+
+footer {
+    padding: 2rem 1.5rem;
+    border-top: 0.0625rem solid var(--color-border);
+    text-align: center;
+}
+
+/* ==========================================================================
+   Reusable utilities
+   ========================================================================== */
+
+main a[href^="#contacto"],
+main a[href^="#servicios"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    margin-top: 1.5rem;
+    margin-right: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    border: 0.0625rem solid var(--color-primary);
+    border-radius: 999rem;
+    font-weight: 700;
+}
+
+main a[href^="#contacto"] {
+    background: var(--color-primary);
+    color: var(--color-surface);
+}
+
+main a[href^="#servicios"] {
+    background: var(--color-surface);
+    color: var(--color-primary-dark);
+}
+
+/* ==========================================================================
+   Responsive base
+   ========================================================================== */
+
+@media (max-width: 48rem) {
+    :root {
+        --section-spacing: 4rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+        gap: 0.75rem 1rem;
+    }
+
+    section {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
