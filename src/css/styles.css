@@ -226,6 +226,116 @@ main a[href^="#servicios"] {
 }
 
 /* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+    min-height: 42rem;
+    display: grid;
+    align-content: center;
+    background:
+        radial-gradient(circle at 84% 24%, rgba(199, 130, 79, 0.18), transparent 30%),
+        linear-gradient(135deg, var(--color-background) 0%, #fffdf9 58%, var(--color-surface-soft) 100%);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.8fr);
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-copy {
+    max-width: 43rem;
+}
+
+.section-label {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14rem;
+    text-transform: uppercase;
+}
+
+.hero-description {
+    max-width: 38rem;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.hero-actions {
+    margin-top: 0.5rem;
+}
+
+.hero-card {
+    padding: 2rem;
+    border: 0.0625rem solid var(--color-border);
+    border-radius: var(--radius-medium);
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: var(--shadow-soft);
+}
+
+.hero-card p {
+    color: var(--color-accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+}
+
+.hero-card h2 {
+    margin-top: 0.75rem;
+    font-family: var(--font-base);
+    font-size: 1.65rem;
+    line-height: 1.2;
+}
+
+.hero-card ul {
+    display: grid;
+    gap: 0.9rem;
+    margin-top: 1.5rem;
+}
+
+.hero-card li {
+    position: relative;
+    padding-left: 1.75rem;
+    color: var(--color-muted);
+}
+
+.hero-card li::before {
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    content: "✓";
+    font-weight: 800;
+}
+
+.hero-highlights {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 3.5rem;
+}
+
+.hero-highlights li {
+    padding-top: 1rem;
+    border-top: 0.0625rem solid rgba(37, 94, 99, 0.22);
+}
+
+.hero-highlights strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+}
+
+.hero-highlights span {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--color-muted);
+}
+
+/* ==========================================================================
    Responsive base
    ========================================================================== */
 
@@ -249,8 +359,47 @@ main a[href^="#servicios"] {
         width: 100%;
     }
 
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .hero-copy,
+    .hero-description {
+        max-width: none;
+    }
+
+    .hero-card {
+        padding: 1.5rem;
+    }
+
+    .hero-highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 2.5rem;
+    }
+
     section {
         padding-right: 1rem;
         padding-left: 1rem;
+    }
+}
+
+@media (max-width: 34rem) {
+    .hero-actions {
+        display: grid;
+    }
+
+    main a[href^="#contacto"],
+    main a[href^="#servicios"] {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .hero-highlights {
+        grid-template-columns: 1fr;
     }
 }
