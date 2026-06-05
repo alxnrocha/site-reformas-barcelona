@@ -333,6 +333,61 @@ main a[href^="#servicios"]:hover {
 }
 
 /* ==========================================================================
+   Services
+   ========================================================================== */
+
+.services-section {
+    background: linear-gradient(180deg, var(--color-background) 0%, #efe5d7 100%);
+}
+
+.section-heading {
+    text-align: center;
+}
+
+.section-heading p:not(.section-label) {
+    max-width: 42rem;
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.05rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    min-height: 18rem;
+    padding: 1.5rem;
+    border: 0.0625rem solid var(--color-border);
+    border-top: 0.25rem solid var(--color-primary);
+    border-radius: var(--radius-medium);
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: var(--shadow-soft);
+}
+
+.service-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 0.75rem;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    margin-top: 1.25rem;
+    color: var(--color-text);
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+.service-card p {
+    margin-top: 0.9rem;
+}
+
+/* ==========================================================================
    Responsive base
    ========================================================================== */
 
@@ -390,6 +445,10 @@ main a[href^="#servicios"]:hover {
         padding-right: 1rem;
         padding-left: 1rem;
     }
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 34rem) {
@@ -401,5 +460,18 @@ main a[href^="#servicios"]:hover {
     main a[href^="#servicios"] {
         width: 100%;
         margin-right: 0;
+    }
+
+    .section-heading {
+        text-align: left;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .service-card {
+        min-height: auto;
     }
 }
