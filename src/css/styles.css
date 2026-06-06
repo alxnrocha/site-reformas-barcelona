@@ -388,6 +388,133 @@ main a[href^="#servicios"]:hover {
 }
 
 /* ==========================================================================
+   Featured projects
+   ========================================================================== */
+
+.projects-section {
+    background: var(--color-surface);
+}
+
+.projects-section > * {
+    max-width: 96rem;
+}
+
+.projects-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
+    align-items: end;
+    gap: 3rem;
+}
+
+.projects-heading > p {
+    max-width: 30rem;
+    padding-bottom: 0.35rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(28rem, 0.75fr);
+    grid-template-rows: repeat(2, minmax(17rem, auto));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    overflow: hidden;
+    border: 0.0625rem solid var(--color-border);
+    border-radius: 0.25rem;
+    background: var(--color-background);
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card-featured {
+    display: grid;
+    grid-row: 1 / 3;
+    grid-template-rows: minmax(28rem, 1fr) auto;
+}
+
+.project-card-compact {
+    display: grid;
+    grid-template-columns: minmax(13rem, 1fr) minmax(14rem, 1.05fr);
+}
+
+.project-content {
+    padding: 1.75rem;
+}
+
+.project-location {
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.project-location::after {
+    display: block;
+    width: 2rem;
+    margin-top: 0.75rem;
+    border-top: 0.125rem solid var(--color-accent);
+    content: "";
+}
+
+.project-content h3 {
+    margin-top: 0.85rem;
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    line-height: 1.15;
+}
+
+.project-card-featured .project-content h3 {
+    font-size: clamp(2rem, 3vw, 2.75rem);
+}
+
+.project-content > p:not(.project-location) {
+    margin-top: 1rem;
+}
+
+.project-details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 0.0625rem solid var(--color-border);
+    color: var(--color-primary-dark);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.project-details li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-height: 2.5rem;
+    padding: 0 1rem;
+    border-right: 0.0625rem solid var(--color-border);
+}
+
+.project-details li:last-child {
+    border-right: 0;
+}
+
+.project-details img {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0.45rem;
+    border: 0.0625rem solid var(--color-border);
+    border-radius: 0.35rem;
+    background: rgba(255, 255, 255, 0.55);
+    opacity: 0.82;
+}
+
+/* ==========================================================================
    Responsive base
    ========================================================================== */
 
@@ -449,6 +576,24 @@ main a[href^="#servicios"]:hover {
     .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .projects-heading {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .projects-heading > p {
+        max-width: 40rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .project-card-featured {
+        grid-row: auto;
+    }
 }
 
 @media (max-width: 34rem) {
@@ -473,5 +618,29 @@ main a[href^="#servicios"]:hover {
 
     .service-card {
         min-height: auto;
+    }
+
+    .project-card-featured,
+    .project-card-compact {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .project-card > img {
+        height: 15rem;
+    }
+
+    .project-details {
+        grid-template-columns: 1fr;
+    }
+
+    .project-details li {
+        padding: 0.65rem 0;
+        border-right: 0;
+        border-bottom: 0.0625rem solid var(--color-border);
+    }
+
+    .project-details li:last-child {
+        border-bottom: 0;
     }
 }
