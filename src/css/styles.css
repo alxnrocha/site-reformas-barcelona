@@ -673,6 +673,100 @@ main a[href^="#servicios"]:hover {
 }
 
 /* ==========================================================================
+   Service areas
+   ========================================================================== */
+
+.areas-section {
+    background: var(--color-surface);
+}
+
+.areas-section > * {
+    max-width: 76rem;
+}
+
+.areas-heading {
+    max-width: 68rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.areas-heading h2 span {
+    display: block;
+    white-space: nowrap;
+}
+
+.areas-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(20rem, 1fr);
+    align-items: center;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.areas-map {
+    overflow: hidden;
+    margin: 0;
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-soft);
+}
+
+.areas-map > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.areas-locations {
+    text-align: left;
+}
+
+.areas-list {
+    display: grid;
+    gap: 1.45rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.areas-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.95rem;
+    color: var(--color-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.areas-list img {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.areas-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: 1.75rem;
+    padding: 0.55rem 1rem;
+    border: 0.0625rem solid var(--color-border);
+    border-radius: 2rem;
+    background: var(--color-background);
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.areas-more::before {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: var(--color-accent);
+    content: "";
+}
+
+/* ==========================================================================
    Responsive base
    ========================================================================== */
 
@@ -781,11 +875,34 @@ main a[href^="#servicios"]:hover {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2.5rem 2rem;
     }
+
+    .areas-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .areas-locations {
+        max-width: 24rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .areas-heading {
+        margin-right: auto;
+    }
+
+    .areas-content {
+        margin-top: 2.5rem;
+    }
 }
 
 @media (max-width: 34rem) {
     .desktop-break {
         display: none;
+    }
+
+    .areas-heading h2 span {
+        white-space: normal;
     }
 
     .hero-actions {
@@ -905,5 +1022,13 @@ main a[href^="#servicios"]:hover {
     .benefit-item {
         min-height: auto;
         padding: 0;
+    }
+
+    .areas-heading {
+        text-align: center;
+    }
+
+    .areas-content {
+        margin-top: 3rem;
     }
 }
