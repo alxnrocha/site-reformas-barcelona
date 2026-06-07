@@ -614,6 +614,65 @@ main a[href^="#servicios"]:hover {
 }
 
 /* ==========================================================================
+   Benefits
+   ========================================================================== */
+
+.benefits-section {
+    background: var(--color-background);
+}
+
+.benefits-section > * {
+    max-width: 88rem;
+}
+
+.benefits-heading h2 {
+    margin-top: 0.35rem;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.75rem;
+    margin-top: 5rem;
+}
+
+.benefit-item {
+    display: grid;
+    grid-template-columns: 3.25rem 1fr;
+    align-items: start;
+    gap: 1rem;
+}
+
+.benefit-icon {
+    display: grid;
+    width: 3.25rem;
+    height: 3.25rem;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--color-surface-soft);
+}
+
+.benefit-icon img {
+    width: 1.45rem;
+    height: 1.45rem;
+    opacity: 0.85;
+}
+
+.benefit-item h3 {
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1.2;
+}
+
+.benefit-item p {
+    margin-top: 0.65rem;
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+/* ==========================================================================
    Responsive base
    ========================================================================== */
 
@@ -711,6 +770,16 @@ main a[href^="#servicios"]:hover {
     .process-step:nth-child(3) {
         padding-left: 0;
         border-left: 0;
+    }
+
+    .benefits-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .benefits-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem 2rem;
     }
 }
 
@@ -822,5 +891,19 @@ main a[href^="#servicios"]:hover {
 
     .process-step > p:last-child {
         margin-top: 0.75rem;
+    }
+
+    .benefits-heading {
+        text-align: center;
+    }
+
+    .benefits-list {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .benefit-item {
+        min-height: auto;
+        padding: 0;
     }
 }
