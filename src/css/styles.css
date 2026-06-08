@@ -967,6 +967,7 @@ main a[href^="#servicios"]:hover {
 .form-field {
     display: grid;
     gap: 0.45rem;
+    align-content: start;
 }
 
 .form-field-wide {
@@ -1007,6 +1008,19 @@ main a[href^="#servicios"]:hover {
     border-color: var(--color-primary);
 }
 
+.form-field input[aria-invalid="true"],
+.form-field select[aria-invalid="true"],
+.form-field textarea[aria-invalid="true"] {
+    border-color: #a33a2f;
+}
+
+.form-error {
+    min-height: 1.1rem;
+    color: #a33a2f;
+    font-size: 0.78rem;
+    line-height: 1.3;
+}
+
 .form-submit {
     width: 100%;
     min-height: 3.1rem;
@@ -1032,6 +1046,10 @@ main a[href^="#servicios"]:hover {
 .form-status {
     color: var(--color-primary);
     font-weight: 700;
+}
+
+.form-status.is-error {
+    color: #a33a2f;
 }
 
 .form-guidance {
