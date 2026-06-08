@@ -1331,7 +1331,9 @@ main a[href^="#servicios"]:hover {
     }
 
     .projects-heading {
+        display: grid;
         grid-template-columns: 1fr;
+        align-items: start;
         gap: 1rem;
     }
 

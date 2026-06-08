@@ -78,6 +78,16 @@ No requiere instalación de dependencias.
 2. Abre la carpeta del proyecto.
 3. Ejecuta `index.html` con un servidor local, por ejemplo Live Server.
 
+## Capturas
+
+### Escritorio
+
+![Vista completa de Nova Reforma Barcelona en escritorio](./screenshots/desktop.png)
+
+### Móvil
+
+![Vista completa de Nova Reforma Barcelona en móvil](./screenshots/mobile.png)
+
 ## Documentación
 
 - [Blueprint](./BLUEPRINT.md): alcance, requisitos y planificación.
@@ -85,7 +95,7 @@ No requiere instalación de dependencias.
 
 ## Estado
 
-Landing page funcional. Pendiente de incorporar las capturas finales y publicar el despliegue.
+Landing page funcional con diseño responsive, accesibilidad, validación de formulario y documentación técnica. Pendiente de publicar el despliegue.
 
 ## Autor
 
