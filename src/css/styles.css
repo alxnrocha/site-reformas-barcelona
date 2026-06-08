@@ -144,9 +144,9 @@ section > * {
 }
 
 .site-nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
     gap: 2rem;
     max-width: var(--container-width);
     margin: 0 auto;
@@ -154,16 +154,19 @@ section > * {
 }
 
 .site-logo {
+    display: inline-flex;
+    align-items: center;
     color: var(--color-primary-dark);
-    font-size: 1.05rem;
-    font-weight: 700;
+}
+
+.site-logo img {
+    width: 6.5rem;
+    height: 4.35rem;
+    object-fit: contain;
 }
 
 .navigation-panel {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 2rem;
+    display: contents;
 }
 
 .nav-toggle {
@@ -201,7 +204,7 @@ section > * {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 1.25rem;
 }
 
@@ -409,6 +412,7 @@ main a[href^="#servicios"]:hover {
 
 .service-image {
     width: 100%;
+    height: auto;
     aspect-ratio: 4 / 3;
     border-radius: 0.75rem;
     object-fit: cover;
@@ -755,6 +759,7 @@ main a[href^="#servicios"]:hover {
 .areas-map > img {
     display: block;
     width: 100%;
+    height: auto;
     aspect-ratio: 3 / 2;
     object-fit: cover;
 }
@@ -1152,10 +1157,15 @@ main a[href^="#servicios"]:hover {
 }
 
 .footer-logo {
+    display: inline-flex;
+    align-items: center;
     color: var(--color-surface);
-    font-family: var(--font-display);
-    font-size: 1.65rem;
-    font-weight: 700;
+}
+
+.footer-logo img {
+    width: 8rem;
+    height: 5.35rem;
+    object-fit: contain;
 }
 
 .footer-logo:hover,
@@ -1237,6 +1247,7 @@ main a[href^="#servicios"]:hover {
 
     .site-nav {
         position: relative;
+        display: flex;
         gap: 1.5rem;
     }
 
