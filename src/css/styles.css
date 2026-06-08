@@ -339,10 +339,10 @@ main a[href^="#servicios"]:hover {
 .hero-content {
     position: relative;
     z-index: 2;
-    width: min(100%, 92rem);
-    max-width: none;
+    width: 100%;
+    max-width: var(--container-width);
     margin: 0 auto;
-    padding: 4.25rem 2rem;
+    padding: 4.25rem 1.5rem;
 }
 
 .hero-copy {
@@ -427,6 +427,7 @@ main a[href^="#servicios"]:hover {
 
 .service-card p {
     margin-top: 0.9rem;
+    min-height: 6.4em;
 }
 
 /* ==========================================================================
@@ -438,7 +439,7 @@ main a[href^="#servicios"]:hover {
 }
 
 .projects-section > * {
-    max-width: 88rem;
+    max-width: var(--container-width);
 }
 
 .projects-heading {
@@ -568,7 +569,7 @@ main a[href^="#servicios"]:hover {
 }
 
 .process-section > * {
-    max-width: 88rem;
+    max-width: var(--container-width);
 }
 
 .process-heading {
@@ -667,7 +668,7 @@ main a[href^="#servicios"]:hover {
 }
 
 .benefits-section > * {
-    max-width: 88rem;
+    max-width: var(--container-width);
 }
 
 .benefits-heading h2 {
@@ -1144,7 +1145,7 @@ main a[href^="#servicios"]:hover {
 
 .footer-main,
 .footer-bottom {
-    max-width: 86rem;
+    max-width: var(--container-width);
     margin-right: auto;
     margin-left: auto;
 }

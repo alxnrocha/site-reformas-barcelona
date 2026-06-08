@@ -4,6 +4,10 @@ Landing page ficticia para una empresa de reformas integrales e interiorismo que
 
 El proyecto presenta servicios, reformas destacadas, proceso de trabajo, beneficios, zonas de actuación, preguntas frecuentes y un formulario de solicitud de presupuesto.
 
+## Demo
+
+[Ver Nova Reforma Barcelona online](https://alxnrocha.github.io/site-reformas-barcelona/)
+
 ## Funcionalidades
 
 - navegación responsive con menú móvil accesible;
@@ -95,7 +99,7 @@ No requiere instalación de dependencias.
 
 ## Estado
 
-Landing page funcional con diseño responsive, accesibilidad, validación de formulario y documentación técnica. Pendiente de publicar el despliegue.
+Landing page finalizada y publicada en GitHub Pages, con diseño responsive, accesibilidad, validación de formulario y documentación técnica.
 
 ## Autor
 
