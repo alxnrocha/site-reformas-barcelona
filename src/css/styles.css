@@ -767,6 +767,125 @@ main a[href^="#servicios"]:hover {
 }
 
 /* ==========================================================================
+   Frequently asked questions
+   ========================================================================== */
+
+.faq-section {
+    display: grid;
+    grid-template-columns: minmax(24rem, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: 6.5rem;
+    max-width: 76rem;
+    min-height: 42rem;
+    margin-right: auto;
+    margin-left: auto;
+    background: var(--color-background);
+}
+
+.faq-intro {
+    position: sticky;
+    top: 7rem;
+}
+
+.faq-intro h2 {
+    max-width: none;
+}
+
+.faq-intro h2 span {
+    display: block;
+    white-space: nowrap;
+}
+
+.faq-intro > p:not(.section-label) {
+    max-width: 30rem;
+    margin-top: 1.5rem;
+    color: var(--color-muted);
+}
+
+.faq-cta {
+    display: inline-flex;
+    margin-top: 2rem;
+    padding: 0.85rem 1.2rem;
+    border: 0.0625rem solid var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.faq-cta:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.faq-list {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.faq-item {
+    overflow: hidden;
+    border: 0.0625rem solid var(--color-border);
+    background: var(--color-surface);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: 100%;
+    min-height: 3.5rem;
+    padding: 0.65rem 1.25rem;
+    border: 0;
+    background: transparent;
+    color: var(--color-heading);
+    font: inherit;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-question::after {
+    flex: 0 0 auto;
+    color: var(--color-accent);
+    font-size: 1.4rem;
+    line-height: 1;
+    content: "+";
+}
+
+.faq-item.is-active .faq-question::after {
+    content: "−";
+}
+
+.faq-item.is-active {
+    border-color: var(--color-accent);
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 3rem 0.55rem 1.25rem;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    line-height: 1.35;
+}
+
+.faq-item.is-active .faq-question {
+    min-height: 0;
+    padding-top: 0.85rem;
+    padding-bottom: 0.45rem;
+}
+
+.faq-item.is-active .faq-answer {
+    display: block;
+}
+
+.faq-question:focus-visible,
+.faq-cta:focus-visible {
+    outline: 0.18rem solid var(--color-accent);
+    outline-offset: 0.2rem;
+}
+
+/* ==========================================================================
    Responsive base
    ========================================================================== */
 
@@ -886,6 +1005,25 @@ main a[href^="#servicios"]:hover {
         margin-right: auto;
         margin-left: auto;
     }
+
+    .faq-section {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        min-height: 0;
+    }
+
+    .faq-intro {
+        position: static;
+    }
+
+    .faq-intro h2 {
+        max-width: 14ch;
+    }
+
+    .faq-intro h2 span {
+        white-space: normal;
+    }
+
 
     .areas-heading {
         margin-right: auto;
