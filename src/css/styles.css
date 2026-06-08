@@ -1070,6 +1070,101 @@ main a[href^="#servicios"]:hover {
 }
 
 /* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+    padding: 4rem 1.5rem 1.5rem;
+    background: #211d1a;
+    color: var(--color-surface);
+}
+
+.footer-main,
+.footer-bottom {
+    max-width: var(--container-width);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: minmax(18rem, 1.4fr) minmax(10rem, 0.7fr) minmax(16rem, 0.9fr);
+    gap: 5rem;
+    padding-bottom: 3rem;
+}
+
+.footer-logo {
+    color: var(--color-surface);
+    font-family: var(--font-display);
+    font-size: 1.65rem;
+    font-weight: 700;
+}
+
+.footer-logo:hover,
+.site-footer a:hover {
+    color: #e8b083;
+}
+
+.footer-brand p {
+    max-width: 28rem;
+    margin-top: 1rem;
+    color: #cfc4ba;
+}
+
+.footer-heading {
+    margin-bottom: 1rem;
+    color: #e8b083;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.footer-navigation ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem 1.5rem;
+}
+
+.footer-navigation a,
+.footer-contact a {
+    color: var(--color-surface);
+}
+
+.footer-contact address {
+    display: grid;
+    gap: 0.45rem;
+    color: #cfc4ba;
+    font-style: normal;
+}
+
+.footer-contact address span {
+    color: #cfc4ba;
+}
+
+.footer-cta {
+    display: inline-flex;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.35);
+    font-weight: 700;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-top: 1.5rem;
+    border-top: 0.0625rem solid rgba(255, 255, 255, 0.16);
+}
+
+.footer-bottom p {
+    color: #a99d94;
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
    Responsive base
    ========================================================================== */
 
@@ -1221,6 +1316,21 @@ main a[href^="#servicios"]:hover {
         max-width: 16ch;
     }
 
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
 
     .areas-heading {
         margin-right: auto;
@@ -1249,6 +1359,14 @@ main a[href^="#servicios"]:hover {
     }
 
     .form-field-wide {
+        grid-column: auto;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
         grid-column: auto;
     }
 
