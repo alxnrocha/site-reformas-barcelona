@@ -16,3 +16,11 @@ faqQuestions.forEach((question) => {
         }
     });
 });
+
+const quoteForm = document.querySelector(".quote-form");
+const formStatus = document.querySelector(".form-status");
+
+quoteForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    formStatus.textContent = "Solicitud simulada correctamente.";
+});

@@ -395,9 +395,91 @@
             </div>
         </section>
 
-        <section id="contacto">
-            <p>Contacto</p>
-            <h2>Solicita una primera valoracion</h2>
+        <section class="contact-section" id="contacto">
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <p class="section-label">Contacto</p>
+                    <h2>Cuéntanos la reforma que tienes en mente</h2>
+                    <p class="contact-intro">
+                        Explícanos qué espacio quieres transformar y prepararemos una
+                        primera valoración adaptada a tu vivienda.
+                    </p>
+
+                    <ul class="contact-details">
+                        <li>
+                            <img src="./src/assets/images/icon-map-pin.svg" alt="" />
+                            <div>
+                                <strong>Zona de trabajo</strong>
+                                <span>Barcelona y municipios cercanos</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./src/assets/images/icon-clock.svg" alt="" />
+                            <div>
+                                <strong>Horario</strong>
+                                <span>Lunes a viernes, 9:00 - 18:00</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./src/assets/images/icon-message-circle.svg" alt="" />
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <span>+34 600 123 456</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="quote-form" novalidate>
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="name">Nombre completo</label>
+                            <input id="name" name="name" type="text" autocomplete="name" required />
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" required />
+                        </div>
+
+                        <div class="form-field">
+                            <label for="phone">Teléfono</label>
+                            <input id="phone" name="phone" type="tel" autocomplete="tel" />
+                        </div>
+
+                        <div class="form-field">
+                            <label for="renovation-type">Tipo de reforma</label>
+                            <select id="renovation-type" name="renovationType" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="integral">Reforma integral</option>
+                                <option value="kitchen">Cocina</option>
+                                <option value="bathroom">Baño</option>
+                                <option value="interior">Interiorismo y acabados</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field form-field-wide">
+                            <label for="message">Cuéntanos qué quieres reformar</label>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Tipo de vivienda, espacios, necesidades y cualquier detalle relevante."
+                                required></textarea>
+                        </div>
+                    </div>
+
+                    <button class="form-submit" type="submit">Solicitar presupuesto</button>
+                    <p class="form-note">Formulario de demostración. No envía datos reales.</p>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+
+                    <div class="form-guidance">
+                        <p>Para preparar una valoración más precisa, puedes indicarnos:</p>
+                        <ul>
+                            <li>tipo y ubicación de la vivienda;</li>
+                            <li>espacios que quieres reformar;</li>
+                            <li>necesidades principales y plazo aproximado.</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 

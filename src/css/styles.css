@@ -886,6 +886,190 @@ main a[href^="#servicios"]:hover {
 }
 
 /* ==========================================================================
+   Contact and quote request
+   ========================================================================== */
+
+.contact-section {
+    background: var(--color-surface-soft);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(18rem, 0.75fr) minmax(0, 1.25fr);
+    overflow: hidden;
+    max-width: 76rem;
+    border: 0.0625rem solid var(--color-border);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-info {
+    padding: 4rem 3rem;
+    background: var(--color-primary-dark);
+    color: var(--color-surface);
+}
+
+.contact-info .section-label {
+    color: #e8b083;
+}
+
+.contact-info h2 {
+    max-width: 11ch;
+    color: var(--color-surface);
+}
+
+.contact-intro {
+    max-width: 30rem;
+    margin-top: 1.5rem;
+    color: #e7ddd4;
+}
+
+.contact-details {
+    display: grid;
+    gap: 0;
+    margin-top: 2.5rem;
+}
+
+.contact-details li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 0;
+    border-top: 0.0625rem solid rgba(255, 255, 255, 0.18);
+}
+
+.contact-details img {
+    width: 1.35rem;
+    height: 1.35rem;
+    filter: brightness(0) invert(1);
+}
+
+.contact-details div {
+    display: grid;
+}
+
+.contact-details span {
+    color: #e7ddd4;
+}
+
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.35rem;
+}
+
+.form-field {
+    display: grid;
+    gap: 0.45rem;
+}
+
+.form-field-wide {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    color: var(--color-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    border: 0.0625rem solid var(--color-border);
+    border-radius: var(--radius-small);
+    background: var(--color-background);
+    color: var(--color-text);
+}
+
+.form-field input,
+.form-field select {
+    min-height: 3rem;
+    padding: 0 0.9rem;
+}
+
+.form-field textarea {
+    min-height: 10rem;
+    padding: 0.8rem 0.9rem;
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: var(--color-primary);
+}
+
+.form-submit {
+    width: 100%;
+    min-height: 3.1rem;
+    margin-top: 1.75rem;
+    border: 0;
+    border-radius: var(--radius-small);
+    background: var(--color-primary);
+    color: var(--color-surface);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background: var(--color-accent);
+}
+
+.form-note,
+.form-status {
+    margin-top: 0.75rem;
+    font-size: 0.82rem;
+}
+
+.form-status {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.form-guidance {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 0.0625rem solid var(--color-border);
+}
+
+.form-guidance > p {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+.form-guidance ul {
+    display: grid;
+    gap: 0.35rem;
+    margin-top: 0.75rem;
+}
+
+.form-guidance li {
+    position: relative;
+    padding-left: 1.15rem;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+
+.form-guidance li::before {
+    position: absolute;
+    top: 0.62em;
+    left: 0;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: var(--color-accent);
+    content: "";
+}
+
+/* ==========================================================================
    Responsive base
    ========================================================================== */
 
@@ -1024,6 +1208,19 @@ main a[href^="#servicios"]:hover {
         white-space: normal;
     }
 
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .quote-form {
+        padding: 2.5rem 2rem;
+    }
+
+    .contact-info h2 {
+        max-width: 16ch;
+    }
+
 
     .areas-heading {
         margin-right: auto;
@@ -1045,6 +1242,14 @@ main a[href^="#servicios"]:hover {
 
     .hero-actions {
         display: grid;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field-wide {
+        grid-column: auto;
     }
 
     main a[href^="#contacto"],
