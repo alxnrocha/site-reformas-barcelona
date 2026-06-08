@@ -16,16 +16,25 @@
         <nav class="site-nav" aria-label="Navegacion principal">
             <a class="site-logo" href="#inicio">Nova Reforma Barcelona</a>
 
-            <ul class="nav-list">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#proceso">Proceso</a></li>
-                <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#zonas">Zonas</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
+            <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="navigation-panel" aria-label="Abrir navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <a class="header-cta" href="#contacto">Solicitar presupuesto</a>
+            <div class="navigation-panel" id="navigation-panel">
+                <ul class="nav-list">
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#proceso">Proceso</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#zonas">Zonas</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+
+                <a class="header-cta" href="#contacto">Solicitar presupuesto</a>
+            </div>
         </nav>
     </header>
 
@@ -106,30 +115,27 @@
             <div class="projects-heading">
                 <div>
                     <p class="section-label">Proyectos</p>
-                    <h2>Reformas pensadas para espacios reales</h2>
+                    <h2>Reformas pensadas<br />para espacios reales</h2>
                 </div>
-                <p>
-                    Cada vivienda exige decisiones diferentes. Estos ejemplos muestran
-                    como combinamos distribucion, materiales y funcionalidad.
-                </p>
+                <a href="#contacto">Cuéntanos tu proyecto <span aria-hidden="true">→</span></a>
             </div>
 
             <div class="projects-grid">
-                <article class="project-card project-card-featured">
+                <article class="project-card">
                     <img src="./src/assets/images/project-eixample-apartment.jpg"
-                        alt="Salon renovado de un piso en el Eixample de Barcelona" />
+                        alt="Salón renovado de un piso en el Eixample de Barcelona" />
                     <div class="project-content">
                         <p class="project-location">Eixample, Barcelona</p>
                         <h3>Reforma integral de vivienda</h3>
-                        <p>
-                            Redistribucion de un piso de 110 m2 para conectar cocina,
-                            comedor y salon, mejorar la entrada de luz y recuperar
+                        <p class="project-description">
+                            Redistribución de un piso de 110 m² para conectar cocina,
+                            comedor y salón, mejorar la entrada de luz y recuperar
                             elementos originales.
                         </p>
                         <ul class="project-details" aria-label="Datos del proyecto">
                             <li>
                                 <img src="./src/assets/images/icon-ruler.svg" alt="" />
-                                <span>110 m2</span>
+                                <span>110 m²</span>
                             </li>
                             <li>
                                 <img src="./src/assets/images/icon-brick-wall.svg" alt="" />
@@ -143,29 +149,59 @@
                     </div>
                 </article>
 
-                <article class="project-card project-card-compact">
+                <article class="project-card">
                     <img src="./src/assets/images/project-gracia-kitchen.jpg"
-                        alt="Cocina reformada con mobiliario de madera en Gracia" />
+                        alt="Cocina reformada con mobiliario de madera en Gràcia" />
                     <div class="project-content">
-                        <p class="project-location">Gracia, Barcelona</p>
+                        <p class="project-location">Gràcia, Barcelona</p>
                         <h3>Cocina abierta y funcional</h3>
-                        <p>
-                            Nueva distribucion, almacenaje a medida y materiales
-                            resistentes para una cocina conectada con el comedor.
+                        <p class="project-description">
+                            Nueva distribución, almacenaje a medida y materiales
+                            resistentes para conectar cocina y comedor sin perder
+                            funcionalidad ni espacio de trabajo.
                         </p>
+                        <ul class="project-details" aria-label="Datos del proyecto">
+                            <li>
+                                <img src="./src/assets/images/icon-ruler.svg" alt="" />
+                                <span>12 m²</span>
+                            </li>
+                            <li>
+                                <img src="./src/assets/images/icon-brick-wall.svg" alt="" />
+                                <span>Cocina</span>
+                            </li>
+                            <li>
+                                <img src="./src/assets/images/icon-clock.svg" alt="" />
+                                <span>4 semanas</span>
+                            </li>
+                        </ul>
                     </div>
                 </article>
 
-                <article class="project-card project-card-compact">
+                <article class="project-card">
                     <img src="./src/assets/images/project-sarria-bathroom.jpg"
-                        alt="Bano renovado con acabados claros en Sarria" />
+                        alt="Baño renovado con acabados claros en Sarrià" />
                     <div class="project-content">
-                        <p class="project-location">Sarria, Barcelona</p>
-                        <h3>Bano sereno y accesible</h3>
-                        <p>
-                            Sustitucion de instalaciones, ducha a nivel de suelo y una
-                            seleccion de acabados faciles de mantener.
+                        <p class="project-location">Sarrià, Barcelona</p>
+                        <h3>Baño sereno y accesible</h3>
+                        <p class="project-description">
+                            Sustitución de instalaciones, ducha a nivel de suelo y una
+                            selección de acabados fáciles de mantener, pensados para la
+                            comodidad y el uso diario.
                         </p>
+                        <ul class="project-details" aria-label="Datos del proyecto">
+                            <li>
+                                <img src="./src/assets/images/icon-ruler.svg" alt="" />
+                                <span>5 m²</span>
+                            </li>
+                            <li>
+                                <img src="./src/assets/images/icon-brick-wall.svg" alt="" />
+                                <span>Baño</span>
+                            </li>
+                            <li>
+                                <img src="./src/assets/images/icon-clock.svg" alt="" />
+                                <span>3 semanas</span>
+                            </li>
+                        </ul>
                     </div>
                 </article>
             </div>

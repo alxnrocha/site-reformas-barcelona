@@ -159,6 +159,44 @@ section > * {
     font-weight: 700;
 }
 
+.navigation-panel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.nav-toggle {
+    display: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.65rem;
+    border: 0.0625rem solid var(--color-border);
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 0.125rem;
+    margin: 0.25rem 0;
+    background: var(--color-primary-dark);
+    transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(0.375rem) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-0.375rem) rotate(-45deg);
+}
+
 .nav-list {
     display: flex;
     flex-wrap: wrap;
@@ -396,97 +434,98 @@ main a[href^="#servicios"]:hover {
 }
 
 .projects-section > * {
-    max-width: 96rem;
+    max-width: 88rem;
 }
 
 .projects-heading {
-    display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
+    display: flex;
     align-items: end;
-    gap: 3rem;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-.projects-heading > p {
-    max-width: 30rem;
-    padding-bottom: 0.35rem;
+.projects-heading > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    width: auto;
+    padding: 0.9rem 1.25rem;
+    border: 0.0625rem solid var(--color-primary);
+    border-radius: var(--radius-small);
+    background: var(--color-primary);
+    color: var(--color-surface);
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.projects-heading > a span {
+    font-size: 1.25rem;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.45fr) minmax(28rem, 0.75fr);
-    grid-template-rows: repeat(2, minmax(17rem, auto));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
 }
 
 .project-card {
+    display: grid;
+    grid-template-rows: 16rem 1fr;
     overflow: hidden;
     border: 0.0625rem solid var(--color-border);
-    border-radius: 0.25rem;
+    border-radius: var(--radius-small);
     background: var(--color-background);
+    box-shadow: 0 1rem 2.5rem rgba(62, 45, 33, 0.07);
 }
 
-.project-card img {
+.project-card > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.project-card-featured {
-    display: grid;
-    grid-row: 1 / 3;
-    grid-template-rows: minmax(28rem, 1fr) auto;
-}
-
-.project-card-compact {
-    display: grid;
-    grid-template-columns: minmax(13rem, 1fr) minmax(14rem, 1.05fr);
-}
-
 .project-content {
-    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 1.25rem 0;
 }
 
 .project-location {
     color: var(--color-primary);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 800;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
 }
 
-.project-location::after {
-    display: block;
-    width: 2rem;
-    margin-top: 0.75rem;
-    border-top: 0.125rem solid var(--color-accent);
-    content: "";
-}
-
 .project-content h3 {
-    margin-top: 0.85rem;
+    margin-top: 0.4rem;
     color: var(--color-text);
     font-family: var(--font-display);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.15;
 }
 
-.project-card-featured .project-content h3 {
-    font-size: clamp(2rem, 3vw, 2.75rem);
-}
-
-.project-content > p:not(.project-location) {
-    margin-top: 1rem;
+.project-description {
+    margin-top: 0.85rem;
+    min-height: 4.2rem;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
 }
 
 .project-details {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-top: 1.25rem;
-    padding-top: 1rem;
+    margin: 1.2rem -1.25rem 0;
+    padding: 0.8rem 0;
     border-top: 0.0625rem solid var(--color-border);
+    background: rgba(239, 230, 219, 0.42);
     color: var(--color-primary-dark);
-    font-size: 0.85rem;
+    font-size: 0.73rem;
     font-weight: 700;
 }
 
@@ -494,10 +533,12 @@ main a[href^="#servicios"]:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    min-height: 2.5rem;
-    padding: 0 1rem;
+    gap: 0.4rem;
+    min-height: 2.4rem;
+    padding: 0 0.25rem;
     border-right: 0.0625rem solid var(--color-border);
+    text-align: center;
+    white-space: nowrap;
 }
 
 .project-details li:last-child {
@@ -505,13 +546,13 @@ main a[href^="#servicios"]:hover {
 }
 
 .project-details img {
-    width: 2.25rem;
-    height: 2.25rem;
-    padding: 0.45rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    padding: 0.36rem;
     border: 0.0625rem solid var(--color-border);
     border-radius: 0.35rem;
-    background: rgba(255, 255, 255, 0.55);
-    opacity: 0.82;
+    background: rgba(255, 255, 255, 0.72);
+    opacity: 0.9;
 }
 
 /* ==========================================================================
@@ -783,8 +824,7 @@ main a[href^="#servicios"]:hover {
 }
 
 .faq-intro {
-    position: sticky;
-    top: 7rem;
+    position: static;
 }
 
 .faq-intro h2 {
@@ -1099,7 +1139,7 @@ main a[href^="#servicios"]:hover {
 
 .footer-main,
 .footer-bottom {
-    max-width: var(--container-width);
+    max-width: 86rem;
     margin-right: auto;
     margin-left: auto;
 }
@@ -1127,6 +1167,10 @@ main a[href^="#servicios"]:hover {
     max-width: 28rem;
     margin-top: 1rem;
     color: #cfc4ba;
+}
+
+.footer-brand {
+    text-align: left;
 }
 
 .footer-heading {
@@ -1192,17 +1236,47 @@ main a[href^="#servicios"]:hover {
     }
 
     .site-nav {
+        position: relative;
+        gap: 1.5rem;
+    }
+
+    .nav-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .navigation-panel {
+        position: absolute;
+        top: 100%;
+        right: 1.5rem;
+        left: 1.5rem;
+        display: none;
+        align-items: stretch;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+        gap: 1.25rem;
+        padding: 1.5rem;
+        border: 0.0625rem solid var(--color-border);
+        background: var(--color-background);
+        box-shadow: var(--shadow-soft);
+    }
+
+    .navigation-panel.is-open {
+        display: flex;
     }
 
     .nav-list {
-        justify-content: flex-start;
-        gap: 0.75rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
     }
 
-    .header-cta {
+    .nav-list a {
+        display: block;
+        padding: 0.7rem 0;
+        border-bottom: 0.0625rem solid var(--color-border);
+    }
+
+    .navigation-panel .header-cta {
         width: 100%;
     }
 
@@ -1257,10 +1331,6 @@ main a[href^="#servicios"]:hover {
     .projects-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-    }
-
-    .project-card-featured {
-        grid-row: auto;
     }
 
     .process-heading {
@@ -1376,6 +1446,10 @@ main a[href^="#servicios"]:hover {
         grid-template-columns: 1fr;
     }
 
+    .nav-list {
+        grid-template-columns: 1fr;
+    }
+
     .form-field-wide {
         grid-column: auto;
     }
@@ -1407,28 +1481,25 @@ main a[href^="#servicios"]:hover {
         min-height: auto;
     }
 
-    .project-card-featured,
-    .project-card-compact {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
     .project-card > img {
-        height: 15rem;
+        height: 16rem;
     }
 
     .project-details {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .project-details li {
-        padding: 0.65rem 0;
-        border-right: 0;
-        border-bottom: 0.0625rem solid var(--color-border);
+        align-items: center;
+        flex-direction: row;
+        gap: 0.3rem;
+        padding: 0.65rem 0.15rem;
+        border-right: 0.0625rem solid var(--color-border);
+        text-align: center;
     }
 
     .project-details li:last-child {
-        border-bottom: 0;
+        border-right: 0;
     }
 
     .process-heading {
@@ -1509,5 +1580,20 @@ main a[href^="#servicios"]:hover {
 
     .areas-content {
         margin-top: 3rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }
