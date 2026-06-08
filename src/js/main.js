@@ -1,3 +1,26 @@
+const navToggle = document.querySelector(".nav-toggle");
+const navigationPanel = document.querySelector(".navigation-panel");
+const navigationLinks = navigationPanel.querySelectorAll("a");
+
+function closeNavigation() {
+    navigationPanel.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Abrir navegación");
+}
+
+navToggle.addEventListener("click", () => {
+    const isOpen = navigationPanel.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Cerrar navegación" : "Abrir navegación",
+    );
+});
+
+navigationLinks.forEach((link) => {
+    link.addEventListener("click", closeNavigation);
+});
+
 const faqQuestions = document.querySelectorAll(".faq-question");
 
 faqQuestions.forEach((question) => {
