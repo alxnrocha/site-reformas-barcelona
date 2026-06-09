@@ -8,7 +8,7 @@ El proyecto forma parte de un portfolio frontend orientado a empleabilidad junio
 
 ## 2. Objetivo Profesional
 
-Este proyecto debe demostrar capacidad para construir una web realista para una pequena empresa local, con una experiencia clara para usuarios que quieren pedir informacion o presupuesto.
+Este proyecto debe demostrar capacidad para construir una web realista para una pequeña empresa local, con una experiencia clara para usuarios que quieren pedir información o presupuesto.
 
 Debe comunicar:
 
@@ -45,7 +45,7 @@ No se usaran frameworks en este proyecto. La intencion es reforzar fundamentos d
 - seccion de proyectos destacados;
 - seccion de proceso de trabajo;
 - seccion de beneficios;
-- seccion de zonas de actuacion;
+- sección de zonas de actuación;
 - preguntas frecuentes;
 - formulario visual para solicitar presupuesto;
 - footer con navegacion y datos de contacto;
@@ -98,7 +98,7 @@ No se usaran frameworks en este proyecto. La intencion es reforzar fundamentos d
 4. Proyectos destacados o tipos de reforma.
 5. Proceso de trabajo.
 6. Beneficios de la empresa.
-7. Zonas de actuacion en Barcelona.
+7. Zonas de actuación en Barcelona.
 8. FAQ.
 9. Contacto y solicitud de presupuesto.
 10. Footer.
@@ -135,7 +135,7 @@ No se usaran frameworks en este proyecto. La intencion es reforzar fundamentos d
 
 ## 13. Performance
 
-- CSS unico y organizado;
+- CSS único y organizado;
 - JavaScript ligero;
 - imagenes comprimidas;
 - evitar dependencias externas innecesarias;

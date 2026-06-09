@@ -105,6 +105,9 @@ Convenciones:
 
 ## 11. Estado actual
 
-La landing page está funcional y contiene todas las secciones principales, interacciones, validación, adaptación responsive y optimizaciones técnicas previstas.
+La landing page está finalizada y contiene todas las secciones principales,
+interacciones, validación, adaptación responsive y optimizaciones técnicas
+previstas.
 
-Las capturas finales están incorporadas y el sitio está publicado mediante GitHub Pages. Solo queda realizar la revisión final de presentación del repositorio.
+Las capturas finales están incorporadas, la revisión de presentación está
+completada y el sitio está publicado mediante GitHub Pages.

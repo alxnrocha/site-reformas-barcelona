@@ -17,7 +17,7 @@ El proyecto presenta servicios, reformas destacadas, proceso de trabajo, benefic
 - beneficios y zonas de actuación;
 - preguntas frecuentes desplegables;
 - formulario con validación accesible;
-- confirmación de envío simulada;
+- confirmación de validación para el formulario de demostración;
 - diseño adaptado a escritorio, tablet y móvil.
 
 ## Tecnologías
@@ -86,11 +86,11 @@ No requiere instalación de dependencias.
 
 ### Escritorio
 
-![Vista completa de Nova Reforma Barcelona en escritorio](./screenshots/desktop.png?v=20260609-2)
+![Vista completa de Nova Reforma Barcelona en escritorio](./screenshots/desktop.png?v=20260609-3)
 
 ### Móvil
 
-![Vista completa de Nova Reforma Barcelona en móvil](./screenshots/mobile.png?v=20260609-2)
+![Vista completa de Nova Reforma Barcelona en móvil](./screenshots/mobile.png?v=20260609-3)
 
 ## Documentación
 
