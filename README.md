@@ -86,11 +86,11 @@ No requiere instalación de dependencias.
 
 ### Escritorio
 
-![Vista completa de Nova Reforma Barcelona en escritorio](./screenshots/desktop.png)
+![Vista completa de Nova Reforma Barcelona en escritorio](./screenshots/desktop.png?v=20260609-2)
 
 ### Móvil
 
-![Vista completa de Nova Reforma Barcelona en móvil](./screenshots/mobile.png)
+![Vista completa de Nova Reforma Barcelona en móvil](./screenshots/mobile.png?v=20260609-2)
 
 ## Documentación
 
