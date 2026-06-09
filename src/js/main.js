@@ -1,6 +1,5 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navigationPanel = document.querySelector(".navigation-panel");
-const navigationLinks = navigationPanel.querySelectorAll("a");
 
 function closeNavigation() {
     navigationPanel.classList.remove("is-open");
@@ -8,18 +7,22 @@ function closeNavigation() {
     navToggle.setAttribute("aria-label", "Abrir navegación");
 }
 
-navToggle.addEventListener("click", () => {
-    const isOpen = navigationPanel.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-    navToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Cerrar navegación" : "Abrir navegación",
-    );
-});
+if (navToggle && navigationPanel) {
+    const navigationLinks = navigationPanel.querySelectorAll("a");
 
-navigationLinks.forEach((link) => {
-    link.addEventListener("click", closeNavigation);
-});
+    navToggle.addEventListener("click", () => {
+        const isOpen = navigationPanel.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        navToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Cerrar navegación" : "Abrir navegación",
+        );
+    });
+
+    navigationLinks.forEach((link) => {
+        link.addEventListener("click", closeNavigation);
+    });
+}
 
 const faqQuestions = document.querySelectorAll(".faq-question");
 
@@ -41,9 +44,9 @@ faqQuestions.forEach((question) => {
 });
 
 const quoteForm = document.querySelector(".quote-form");
-const formStatus = document.querySelector(".form-status");
+const formStatus = quoteForm?.querySelector(".form-status");
 
-const formFields = {
+const formFields = quoteForm ? {
     name: {
         input: quoteForm.elements.name,
         error: document.querySelector("#name-error"),
@@ -88,7 +91,7 @@ const formFields = {
             return "";
         },
     },
-};
+} : {};
 
 function validateField(field) {
     const message = field.validate(field.input.value);
@@ -106,7 +109,7 @@ Object.values(formFields).forEach((field) => {
     });
 });
 
-quoteForm.addEventListener("submit", (event) => {
+quoteForm?.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const fields = Object.values(formFields);
@@ -124,5 +127,6 @@ quoteForm.addEventListener("submit", (event) => {
     }
 
     formStatus.classList.remove("is-error");
-    formStatus.textContent = "Solicitud simulada correctamente.";
+    formStatus.textContent = "Validación completada. Esta demostración no envía datos.";
+    quoteForm.reset();
 });
