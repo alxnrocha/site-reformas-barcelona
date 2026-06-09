@@ -90,7 +90,7 @@ No requiere instalación de dependencias.
 
 ### Móvil
 
-![Vista completa de Nova Reforma Barcelona en móvil](./screenshots/mobile.png?v=20260609-3)
+![Vista completa de Nova Reforma Barcelona en móvil](./screenshots/mobile.png?v=20260609-4)
 
 ## Documentación
 
