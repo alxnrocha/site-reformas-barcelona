@@ -38,8 +38,6 @@
 │   │   └── styles.css             # Estilos CSS3, CSS Grid y variables globales
 │   └── js/
 │       └── main.js                # Control de menú móvil, acordeones y validación
-├── BLUEPRINT.md                   # Requisitos y planificación
-└── DECISIONS.md                   # Registro de decisiones de arquitectura
 ```
 
 ---
