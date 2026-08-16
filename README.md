@@ -13,18 +13,6 @@
 
 ---
 
-## 📸 Vistas Reales del Sistema
-
-### 1. Vista Principal (Desktop)
-
-![Vista desktop de Nova Reforma Barcelona](./screenshots/desktop.png)
-
-### 2. Experiencia Responsive (Móvil)
-
-![Vista mobile de Nova Reforma Barcelona](./screenshots/mobile.png)
-
----
-
 ## ✨ Características Principales
 
 ### 🚀 Experiencia de Usuario & Frontend
