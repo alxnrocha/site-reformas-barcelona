@@ -29,9 +29,6 @@
 ```text
 02-site-reformas-barcelona/
 ├── index.html                     # Entrada HTML5 semántica
-├── screenshots/                   # Capturas de pantalla reales
-│   ├── desktop.png
-│   └── mobile.png
 ├── src/
 │   ├── assets/                    # Galería de imágenes y planos
 │   ├── css/
