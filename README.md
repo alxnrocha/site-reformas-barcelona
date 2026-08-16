@@ -71,6 +71,14 @@ No requiere instalación de dependencias de Node.js:
 
 ---
 
+## 🧪 Calidad de Código y Pruebas
+
+- **Estándares Web:** Marcado HTML5 semántico y CSS3 Grid/Flexbox validado según las directrices oficiales del W3C.
+- **Accesibilidad (a11y):** Cumplimiento de pautas WCAG 2.1 nivel AA (navegación por teclado, atributos ARIA y compatibilidad con `prefers-reduced-motion`).
+- **SEO y Metadatos:** Esquema JSON-LD para negocio local, Open Graph y etiquetas canónicas.
+
+---
+
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulte el archivo [LICENSE](./LICENSE) para más detalles.
