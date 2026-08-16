@@ -1,106 +1,78 @@
-# Nova Reforma Barcelona
+# Nova Reforma Barcelona — Sitio Web Corporativo de Reformas
 
-Landing page ficticia para una empresa de reformas integrales e interiorismo que trabaja en Barcelona y municipios cercanos.
+[![Demo GitHub Pages](https://img.shields.io/badge/Demo-GitHub_Pages-22c55e?style=for-the-badge&logo=github&logoColor=white)](https://alxnrocha.github.io/site-reformas-barcelona/)
+[![HTML5](https://img.shields.io/badge/HTML5-Semántico-e34f26.svg?logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-Grid_%26_Flexbox-1572b6.svg?logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-Modules_ES6+-f7df1e.svg?logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
-El proyecto presenta servicios, reformas destacadas, proceso de trabajo, beneficios, zonas de actuación, preguntas frecuentes y un formulario de solicitud de presupuesto.
+**Nova Reforma Barcelona** es una web comercial y corporativa diseñada para una empresa de reformas integrales e interiorismo en Barcelona. Cuenta con catálogo interactivo de servicios, proyectos destacados, cálculo orientativo de plazos, zonas de cobertura y solicitud de presupuestos.
 
-## Demo
+- 🌐 **Demo en Vivo (GitHub Pages):** [https://alxnrocha.github.io/site-reformas-barcelona/](https://alxnrocha.github.io/site-reformas-barcelona/)
+- 📦 **Repositorio GitHub:** [https://github.com/alxnrocha/site-reformas-barcelona](https://github.com/alxnrocha/site-reformas-barcelona)
 
-[Ver Nova Reforma Barcelona online](https://alxnrocha.github.io/site-reformas-barcelona/)
+---
 
-## Funcionalidades
+## 📸 Vistas Reales del Sistema
 
-- navegación responsive con menú móvil accesible;
-- presentación de servicios de reforma;
-- proyectos destacados con datos técnicos;
-- explicación visual del proceso de trabajo;
-- beneficios y zonas de actuación;
-- preguntas frecuentes desplegables;
-- formulario con validación accesible;
-- confirmación de validación para el formulario de demostración;
-- diseño adaptado a escritorio, tablet y móvil.
+### 1. Vista Principal (Desktop)
 
-## Tecnologías
+![Vista desktop de Nova Reforma Barcelona](./screenshots/desktop.png)
 
-- HTML5 semántico;
-- CSS3 con variables, Grid y Flexbox;
-- JavaScript;
-- Git y GitHub;
-- GitHub Pages para el despliegue.
+### 2. Experiencia Responsive (Móvil)
 
-No se utilizan frameworks porque el alcance del proyecto se resuelve con tecnologías nativas y permite mantener una implementación ligera, accesible y fácil de mantener.
+![Vista mobile de Nova Reforma Barcelona](./screenshots/mobile.png)
 
-## Calidad técnica
+---
 
-### Accesibilidad
+## ✨ Características Principales
 
-- navegación operable mediante teclado;
-- atributos ARIA en menú, FAQ y formulario;
-- mensajes de error asociados a cada campo;
-- foco visible en elementos interactivos;
-- textos alternativos adecuados;
-- soporte para `prefers-reduced-motion`.
+### 🚀 Experiencia de Usuario & Frontend
+- **Catálogo de Servicios y Proyectos:** Fichas interactivas de reformas de cocinas, baños e interiorismo integral con especificaciones y datos técnicos.
+- **Proceso de Trabajo Paso a Paso:** Línea de tiempo visual que guía al cliente desde el diseño inicial hasta la entrega de llaves.
+- **Accesibilidad y Soporte de Movimiento Reducido:** Estructura con soporte completo para navegación por teclado, roles ARIA y compatibilidad con `prefers-reduced-motion`.
+- **Formulario de Presupuesto Accesible:** Formulario tipado con asociación de errores por campo (`aria-describedby`) y confirmación accesible.
+- **SEO y Datos Estructurados:** Implementación de Schema.org JSON-LD para negocio local, Open Graph y etiquetas canónicas.
 
-### Responsive
+---
 
-La interfaz se adapta a distintos tamaños de pantalla mediante layouts fluidos y breakpoints para escritorio, tablet y móvil.
-
-### SEO y rendimiento
-
-- título y descripción optimizados;
-- metadatos Open Graph y Twitter Card;
-- URL canónica;
-- datos estructurados JSON-LD;
-- jerarquía semántica de encabezados;
-- dimensiones explícitas en imágenes;
-- carga prioritaria del hero;
-- lazy loading para imágenes secundarias.
-
-## Estructura
+## 🏛️ Estructura del Proyecto
 
 ```text
-.
-|-- index.html
-|-- BLUEPRINT.md
-|-- DECISIONS.md
-|-- README.md
-|-- screenshots/
-`-- src/
-    |-- assets/
-    |   `-- images/
-    |-- css/
-    |   `-- styles.css
-    `-- js/
-        `-- main.js
+02-site-reformas-barcelona/
+├── index.html                     # Entrada HTML5 semántica
+├── screenshots/                   # Capturas de pantalla reales
+│   ├── desktop.png
+│   └── mobile.png
+├── src/
+│   ├── assets/                    # Galería de imágenes y planos
+│   ├── css/
+│   │   └── styles.css             # Estilos CSS3, CSS Grid y variables globales
+│   └── js/
+│       └── main.js                # Control de menú móvil, acordeones y validación
+├── BLUEPRINT.md                   # Requisitos y planificación
+└── DECISIONS.md                   # Registro de decisiones de arquitectura
 ```
 
-## Ejecución local
+---
 
-No requiere instalación de dependencias.
+## ⚡ Guía de Inicio Rápido
 
-1. Clona el repositorio.
-2. Abre la carpeta del proyecto.
-3. Ejecuta `index.html` con un servidor local, por ejemplo Live Server.
+### 1. Clonar el Repositorio
+```bash
+git clone https://github.com/alxnrocha/site-reformas-barcelona.git
+cd site-reformas-barcelona
+```
 
-## Capturas
+### 2. Ejecutar en Local
+No requiere instalación de dependencias de Node.js:
+- Abra `index.html` directamente en su navegador web, o
+- Utilice una extensión de servidor local como **Live Server** de VS Code o `npx serve .`.
 
-### Escritorio
+---
 
-![Vista completa de Nova Reforma Barcelona en escritorio](./screenshots/desktop.png?v=20260609-3)
+## 📄 Licencia
 
-### Móvil
+Este proyecto está bajo la Licencia MIT. Consulte el archivo [LICENSE](./LICENSE) para más detalles.
 
-![Vista completa de Nova Reforma Barcelona en móvil](./screenshots/mobile.png?v=20260609-4)
-
-## Documentación
-
-- [Blueprint](./BLUEPRINT.md): alcance, requisitos y planificación.
-- [Decisiones técnicas](./DECISIONS.md): criterios de implementación y arquitectura.
-
-## Estado
-
-Landing page finalizada y publicada en GitHub Pages, con diseño responsive, accesibilidad, validación de formulario y documentación técnica.
-
-## Autor
-
-Alexandre Rocha
+**Autor:** [Alexandre Rocha](https://github.com/alxnrocha)
