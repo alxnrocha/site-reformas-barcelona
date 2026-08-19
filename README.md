@@ -12,18 +12,25 @@
 
 ---
 
-## ✨ Características Principales
+## 🌟 Visión General & Propuesta de Valor
 
-### 🚀 Experiencia de Usuario & Frontend
-- **Catálogo de Servicios y Proyectos:** Fichas interactivas de reformas de cocinas, baños e interiorismo integral con especificaciones y datos técnicos.
-- **Proceso de Trabajo Paso a Paso:** Línea de tiempo visual que guía al cliente desde el diseño inicial hasta la entrega de llaves.
-- **Accesibilidad y Soporte de Movimiento Reducido:** Estructura con soporte completo para navegación por teclado, roles ARIA y compatibilidad con `prefers-reduced-motion`.
-- **Formulario de Presupuesto Accesible:** Formulario tipado con asociación de errores por campo (`aria-describedby`) y confirmación accesible.
-- **SEO y Datos Estructurados:** Implementación de Schema.org JSON-LD para negocio local, Open Graph y etiquetas canónicas.
+**Nova Reforma Barcelona** es una plataforma web corporativa desarrollada para presentar el catálogo de servicios de reformas integrales de viviendas y locales en Barcelona.
+
+Integra cálculo visual de plazos de obra, catálogo de proyectos con galerías interactivas, mapas interactivos de zonas de cobertura con Leaflet.js y captación de clientes mediante formularios accesibles.
 
 ---
 
-## 🏛️ Estructura del Proyecto
+## ✨ Características Principales
+
+- **Catálogo de Servicios y Proyectos:** Fichas interactivas de reformas de cocinas, baños e interiorismo con especificaciones técnicas.
+- **Proceso de Trabajo Paso a Paso:** Línea de tiempo visual que guía al cliente desde el diseño inicial hasta la entrega de llaves.
+- **Mapa de Cobertura con Leaflet.js:** Visualización interactiva de áreas de servicio en Barcelona y distritos adyacentes.
+- **Accesibilidad y Soporte de Movimiento Reducido:** Estructura con soporte completo para navegación por teclado, roles ARIA y compatibilidad con `prefers-reduced-motion`.
+- **SEO y Datos Estructurados:** Schema.org JSON-LD para negocio local, Open Graph y etiquetas canónicas.
+
+---
+
+## 🏛️ Arquitectura del Proyecto
 
 ```text
 02-site-reformas-barcelona/
@@ -31,35 +38,43 @@
 ├── src/
 │   ├── assets/                    # Imágenes de proyectos e iconos
 │   ├── css/
-│   │   └── styles.css             # Arquitectura CSS moderna con variables
+│   │   └── styles.css             # Arquitectura CSS con variables
 │   └── js/
 │       └── main.js                # Lógica de componentes interactivos
+├── LICENSE
+└── README.md
 ```
 
 ---
 
-## ⚡ Guía de Inicio Rápido
+## 🚀 Instalación y Puesta en Marcha
 
-### 1. Clonar el Repositorio
-```bash
-git clone https://github.com/alxnrocha/site-reformas-barcelona.git
-cd site-reformas-barcelona
-```
+### Prerrequisitos
+- Navegador web moderno (Chrome, Firefox, Safari, Edge).
 
-### 2. Ejecutar en Local
-- Abra `index.html` directamente en su navegador web, o
-- Inicie un servidor local con **Live Server** o `npx serve .`.
+### Pasos
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/alxnrocha/site-reformas-barcelona.git
+   cd site-reformas-barcelona
+   ```
+
+2. **Ejecutar en modo local:**
+   Al estar desarrollado con Vanilla Web Technologies, no requiere instalación de paquetes:
+   - Abra el archivo `index.html` directamente en su navegador, o
+   - Inicie un servidor local con **Live Server** de VS Code o ejecutando `npx serve .`.
 
 ---
 
-## 🧪 Calidad de Código y Pruebas
+## 🛡️ Calidad de Código & Testing
 
-- **W3C Validated:** Código HTML5 y CSS3 conforme a estándares W3C.
-- **Accesibilidad (a11y):** WCAG 2.1 nivel AA verificado.
-- **Optimización de Rendimiento:** Imágenes comprimidas y carga diferida.
+- **Estándares W3C:** HTML5 y CSS3 validados contra directrices oficiales del W3C.
+- **Accesibilidad (a11y):** WCAG 2.1 nivel AA verificado para lectores de pantalla y navegación por teclado.
+- **Optimización de Rendimiento:** Compresión de assets visuales y carga diferida.
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulte el archivo [LICENSE](./LICENSE) para más detalles.
+Este proyecto se encuentra bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
