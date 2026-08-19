@@ -1,15 +1,14 @@
 # Nova Reforma Barcelona — Sitio Web Corporativo de Reformas
 
-[![Demo GitHub Pages](https://img.shields.io/badge/Demo-GitHub_Pages-22c55e?style=for-the-badge&logo=github&logoColor=white)](https://alxnrocha.github.io/site-reformas-barcelona/)
-[![HTML5](https://img.shields.io/badge/HTML5-Semántico-e34f26.svg?logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-Grid_%26_Flexbox-1572b6.svg?logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-Modules_ES6+-f7df1e.svg?logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-success?style=flat-square&logo=github&logoColor=white)](https://alxnrocha.github.io/site-reformas-barcelona/)
+[![HTML5](https://img.shields.io/badge/HTML5-Semantic_Markup-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-Grid_&_Flexbox-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-Modules_ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+[![Leaflet](https://img.shields.io/badge/Leaflet.js-Interactive_Maps-199900?style=flat-square&logo=leaflet&logoColor=white)](https://leafletjs.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-**Nova Reforma Barcelona** es una web comercial y corporativa diseñada para una empresa de reformas integrales e interiorismo en Barcelona. Cuenta con catálogo interactivo de servicios, proyectos destacados, cálculo orientativo de plazos, zonas de cobertura y solicitud de presupuestos.
-
-- 🌐 **Demo en Vivo (GitHub Pages):** [https://alxnrocha.github.io/site-reformas-barcelona/](https://alxnrocha.github.io/site-reformas-barcelona/)
-- 📦 **Repositorio GitHub:** [https://github.com/alxnrocha/site-reformas-barcelona](https://github.com/alxnrocha/site-reformas-barcelona)
+> **Proyecto 02 del Portafolio Profesional** — Sitio web corporativo y comercial para empresa de reformas integrales e interiorismo en Barcelona.  
+> 🔗 **Demo en Vivo en GitHub Pages:** [https://alxnrocha.github.io/site-reformas-barcelona/](https://alxnrocha.github.io/site-reformas-barcelona/)
 
 ---
 
@@ -28,13 +27,13 @@
 
 ```text
 02-site-reformas-barcelona/
-├── index.html                     # Entrada HTML5 semántica
+├── index.html                     # Documento HTML5 principal
 ├── src/
-│   ├── assets/                    # Galería de imágenes y planos
+│   ├── assets/                    # Imágenes de proyectos e iconos
 │   ├── css/
-│   │   └── styles.css             # Estilos CSS3, CSS Grid y variables globales
+│   │   └── styles.css             # Arquitectura CSS moderna con variables
 │   └── js/
-│       └── main.js                # Control de menú móvil, acordeones y validación
+│       └── main.js                # Lógica de componentes interactivos
 ```
 
 ---
@@ -48,22 +47,19 @@ cd site-reformas-barcelona
 ```
 
 ### 2. Ejecutar en Local
-No requiere instalación de dependencias de Node.js:
 - Abra `index.html` directamente en su navegador web, o
-- Utilice una extensión de servidor local como **Live Server** de VS Code o `npx serve .`.
+- Inicie un servidor local con **Live Server** o `npx serve .`.
 
 ---
 
 ## 🧪 Calidad de Código y Pruebas
 
-- **Estándares Web:** Marcado HTML5 semántico y CSS3 Grid/Flexbox validado según las directrices oficiales del W3C.
-- **Accesibilidad (a11y):** Cumplimiento de pautas WCAG 2.1 nivel AA (navegación por teclado, atributos ARIA y compatibilidad con `prefers-reduced-motion`).
-- **SEO y Metadatos:** Esquema JSON-LD para negocio local, Open Graph y etiquetas canónicas.
+- **W3C Validated:** Código HTML5 y CSS3 conforme a estándares W3C.
+- **Accesibilidad (a11y):** WCAG 2.1 nivel AA verificado.
+- **Optimización de Rendimiento:** Imágenes comprimidas y carga diferida.
 
 ---
 
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulte el archivo [LICENSE](./LICENSE) para más detalles.
-
-**Autor:** [Alexandre Rocha](https://github.com/alxnrocha)
