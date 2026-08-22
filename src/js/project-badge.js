@@ -1,7 +1,7 @@
 (function () {
-  const projectName = 'Nova Reforma Barcelona';
-  const projectUrl = 'https://alxnrocha.github.io/site-reformas-barcelona/';
-  const description = 'Portal de Reformas e Construção Civil em Barcelona';
+  const projectName = "Nova Reforma Barcelona";
+  const projectUrl = "https://alxnrocha.github.io/site-reformas-barcelona/";
+  const description = "Portal de Reformas e Construção Civil em Barcelona";
 
   const badgeHtml = `
     <style>
